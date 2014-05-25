@@ -1,13 +1,14 @@
 # Maintainer: Augusto F. Hack <hack.augusto@gmail.com>
 pkgname=diamond-git
 pkgver=3.4
-pkgrel=1
+pkgrel=2
 pkgdesc="Diamond is daemon that collects system metrics and publishes them to graphite and others"
 arch=(any)
 url="https://github.com/BrightcoveOS/Diamond"
 license=('mit')
 depends=('python2' 'python2-configobj')
 makedepends=('git' 'python2' 'make' )
+backup=(etc/diamond/diamond.conf)
 source=('diamond::git+https://github.com/BrightcoveOS/Diamond.git'
         'diamond.service')
 md5sums=('SKIP'
